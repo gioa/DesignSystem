@@ -1,6 +1,6 @@
 # Install
 
-* run ./init.sh first
+* run ./init.sh first  
 * run gitbook serve
 
 

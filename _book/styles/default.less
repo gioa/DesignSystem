@@ -1,0 +1,101 @@
+@import "./variables.less";
+
+// text types
+@text-default-color: @black-alpha-800;
+@text-secondary-color: @black-alpha-500;
+@text-tertiary-color: @gray-500;
+@text-tertiary-hover-color: @gray-600;
+@text-disabled-color: @black-alpha-200;
+@text-error-color: @red-700;
+@text-warning-color: @yellow-500;
+
+
+body, html, body{
+	width: 100%;
+	height: 100%;
+	background: @white;
+	color: @text-default-color;
+	font-family: @text-font;
+	font-weight: @font-weight-base;
+}
+
+// text sizes
+.headline {
+	font-size: @font-size-x-large;
+	line-height: @line-height-x-large;
+	font-family: @newslab-font;
+	color: @black-alpha-300;
+}
+
+.title-large {
+	font-size: @font-size-large;
+	line-height: @line-height-large;
+}
+
+.title-dialog {
+	font-size: @font-size-h1;
+	line-height: @line-height-h1;
+	font-weight: @font-weight-light;
+}
+
+ .title-page {
+ 	font-size: @font-size-h2;
+	line-height: @line-height-h2;
+ }
+
+ .title-section {
+ 	font-size: @font-size-h3;
+	line-height: @line-height-h3;
+ }
+
+.text-tab {
+ 	font-size: @font-size-h4;
+	line-height: @line-height-h4;
+ }
+
+.text-large {
+ 	font-size: @font-size-h5;
+	line-height: @line-height-h5;
+}
+
+.text-basic {
+ 	font-size: @font-size-h6;
+	line-height: @line-height-h6;
+}
+
+.text-small {
+ 	font-size: @font-size-small;
+	line-height: @line-height-small;
+}
+
+.text-smaller {
+ 	font-size: @font-size-x-small;
+	line-height: @line-height-x-small;
+}
+
+// homeview 
+.homeview-section-title{
+	color: @text-secondary-color;
+	.title-page;
+}
+
+// link
+// @link-text: @blue-green-100;
+// @link-icon: @gray-600;
+// @link-hover-text: @blue-green-200;
+// @link-hover-icon: @blue-green-200;
+// @link-disabled-text: @text-disabled;
+// @link-disabled-icon: @text-disabled;
+// @link-tooltip-text: @blue-200;
+
+// border
+@border-light: @gray-150;
+@border-medium: @gray-300;
+@border-dark: @gray-400;
+
+// general components 
+//@item-active-bg         : @primary-1;
+//@item-hover-bg          : @primary-1;
+
+// box shadow
+@box-shadow-default: @black-alpha-50;

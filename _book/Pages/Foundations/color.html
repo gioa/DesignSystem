@@ -34,15 +34,7 @@
 
     
         
-    
-        
-    
-        
-    
-        
-    
-        
-    
+        <link rel="stylesheet" href="../../website-1508546657050.css">
         
     
 
@@ -519,66 +511,67 @@
 <li><strong>For designer</strong>, use only the following colors in the system. If any color is missing, add it in color.less file. </li>
 <li><strong>For an engineer</strong>, ideally you do not need to define color variables, they should be defined in the components.</li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> colors = {
+<pre><code class="lang-less"><span class="hljs-comment">// All color values</span>
+<span class="hljs-variable">@black:</span> <span class="hljs-number">#000000</span>;
+<span class="hljs-variable">@white:</span> <span class="hljs-number">#ffffff</span>;
 
-     black: <span class="hljs-string">&apos;#000000&apos;</span>,
-     white: <span class="hljs-string">&apos;#ffffff&apos;</span>,
+<span class="hljs-variable">@white-alpha-50:</span> rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.05</span>);
+<span class="hljs-variable">@white-alpha-100:</span> rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.12</span>);
+<span class="hljs-variable">@white-alpha-500:</span> rgba(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.5</span>);
 
-     whitealpha50: <span class="hljs-string">&apos;rgba(255, 255, 255, 0.05)&apos;</span>,
-     whitealpha100: <span class="hljs-string">&apos;rgba(255, 255, 255, 0.12)&apos;</span>,
-     whitealpha500: <span class="hljs-string">&apos;rgba(255, 255, 255, 0.5)&apos;</span>,
+<span class="hljs-variable">@black-alpha-800:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.80</span>); <span class="hljs-comment">// #333333</span>
+<span class="hljs-variable">@black-alpha-700:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.70</span>); <span class="hljs-comment">// #4c4c4c</span>
+<span class="hljs-variable">@black-alpha-500:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.52</span>); <span class="hljs-comment">// #7a7a7a</span>
+<span class="hljs-variable">@black-alpha-300:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.34</span>); <span class="hljs-comment">// #a8a8a8</span>
+<span class="hljs-variable">@black-alpha-200:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.25</span>); <span class="hljs-comment">// #bfbfbf</span>
+<span class="hljs-variable">@black-alpha-100:</span> rgba(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.12</span>); <span class="hljs-comment">// #e0e0e0</span>
+<span class="hljs-variable">@black-alpha-50:</span> rgba(<span class="hljs-number">252</span>, <span class="hljs-number">252</span>, <span class="hljs-number">250</span>, <span class="hljs-number">0.8</span>); <span class="hljs-comment">//#fcfcfb</span>
 
-     blackalpha800: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.80)&apos;</span>, <span class="hljs-comment">// #333333</span>
-     blackalpha700: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.70)&apos;</span>, <span class="hljs-comment">// #4c4c4c</span>
-     blackalpha500: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.52)&apos;</span>, <span class="hljs-comment">// #7a7a7a</span>
-     blackalpha300: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.34)&apos;</span>, <span class="hljs-comment">// #a8a8a8</span>
-     blackalpha200: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.25)&apos;</span>, <span class="hljs-comment">// #bfbfbf</span>
-     blackalpha100: <span class="hljs-string">&apos;rgba(0, 0, 0, 0.12)&apos;</span>, <span class="hljs-comment">// #e0e0e0</span>
-     blackalpha50: <span class="hljs-string">&apos;rgba(252, 252, 250, 0.8)&apos;</span>, <span class="hljs-comment">//#fcfcfb</span>
+<span class="hljs-variable">@gray-900:</span> <span class="hljs-number">#272727</span>; <span class="hljs-comment">// tooltip bg, banner bg</span>
+<span class="hljs-variable">@gray-800:</span> <span class="hljs-number">#333333</span>; <span class="hljs-comment">// primary text</span>
+<span class="hljs-variable">@gray-700:</span> <span class="hljs-number">#464644</span>; <span class="hljs-comment">// sidebar bg - rgb(70, 70, 68)</span>
+<span class="hljs-variable">@gray-600:</span> <span class="hljs-number">#797979</span>; <span class="hljs-comment">// secondary text (file tree)</span>
+<span class="hljs-variable">@gray-500:</span> <span class="hljs-number">#9b9b9b</span>; <span class="hljs-comment">// tertiary text (notebook menu item, welcome section title, github)</span>
+<span class="hljs-variable">@gray-400:</span> <span class="hljs-number">#cccccc</span>; <span class="hljs-comment">// dark border</span>
+<span class="hljs-variable">@gray-300:</span> <span class="hljs-number">#dddddd</span>; <span class="hljs-comment">// table border</span>
+<span class="hljs-variable">@gray-200:</span> <span class="hljs-number">#eeeeee</span>; <span class="hljs-comment">// light bg</span>
+<span class="hljs-variable">@gray-150:</span> <span class="hljs-number">#e6e8ea</span>; <span class="hljs-comment">// light border</span>
+<span class="hljs-variable">@gray-100:</span> <span class="hljs-number">#f5f5f5</span>; <span class="hljs-comment">// lighter bg</span>
+<span class="hljs-variable">@gray-50:</span>  <span class="hljs-number">#fafafa</span>; <span class="hljs-comment">// lightest bg</span>
 
-     gray900: <span class="hljs-string">&apos;#272727&apos;</span>, <span class="hljs-comment">// tooltip bg, banner bg</span>
-     gray800: <span class="hljs-string">&apos;#333333&apos;</span>, <span class="hljs-comment">// primary text</span>
-     gray700: <span class="hljs-string">&apos;#464644&apos;</span>, <span class="hljs-comment">// sidebar bg  rgb(70, 70, 68)</span>
-     gray600: <span class="hljs-string">&apos;#797979&apos;</span>, <span class="hljs-comment">// secondary text (file tree)</span>
-     gray500: <span class="hljs-string">&apos;#9b9b9b&apos;</span>, <span class="hljs-comment">// tertiary text (notebook menu item, welcome section title, github)</span>
-     gray400: <span class="hljs-string">&apos;#cccccc&apos;</span>, <span class="hljs-comment">// dark border</span>
-     gray300: <span class="hljs-string">&apos;#dddddd&apos;</span>, <span class="hljs-comment">// table border</span>
-     gray200: <span class="hljs-string">&apos;#eeeeee&apos;</span>, <span class="hljs-comment">// light bg</span>
-     gray150: <span class="hljs-string">&apos;#e6e8ea&apos;</span>, <span class="hljs-comment">// light border</span>
-     gray100: <span class="hljs-string">&apos;#f5f5f5&apos;</span>, <span class="hljs-comment">// lighter bg</span>
-     gray50:  <span class="hljs-string">&apos;#fafafa&apos;</span>, <span class="hljs-comment">// lightest bg</span>
+<span class="hljs-variable">@blue-200:</span> <span class="hljs-number">#64c3ff</span>; <span class="hljs-comment">// rgba(100,195,255)</span>
+<span class="hljs-variable">@blue-500:</span> <span class="hljs-number">#258bd2</span>; <span class="hljs-comment">// rgba(37, 139, 210, 1.0)</span>
+<span class="hljs-variable">@blue-600:</span> <span class="hljs-number">#217dbc</span>;
+<span class="hljs-variable">@blue-700:</span> <span class="hljs-number">#1b69a0</span>; <span class="hljs-comment">// rgb(27, 105, 160)</span>
 
-     blue200: <span class="hljs-string">&apos;#64c3ff&apos;</span>, <span class="hljs-comment">// rgba(100,195,255)</span>
-     blue500: <span class="hljs-string">&apos;#258bd2&apos;</span>, <span class="hljs-comment">// rgba(37, 139, 210, 1.0)</span>
-     blue600: <span class="hljs-string">&apos;#217dbc&apos;</span>,
-     blue700: <span class="hljs-string">&apos;#1b69a0&apos;</span>, <span class="hljs-comment">// rgb(27, 105, 160)</span>
+<span class="hljs-variable">@blue-green-100:</span> <span class="hljs-number">#1CA0C2</span>; <span class="hljs-comment">// branding and links</span>
+<span class="hljs-variable">@blue-green-200:</span> darken(<span class="hljs-number">#1CA0C2</span>, <span class="hljs-number">10%</span>);
 
-     bluegreen100: <span class="hljs-string">&apos;#1CA0C2&apos;</span>, <span class="hljs-comment">// branding and links  </span>
+<span class="hljs-variable">@green-100:</span> <span class="hljs-number">#ecfdec</span>;
+<span class="hljs-variable">@green-200:</span> <span class="hljs-number">#d6e9c6</span>;
+<span class="hljs-variable">@green-400:</span> <span class="hljs-number">#10b36b</span>;
+<span class="hljs-variable">@green-500:</span> <span class="hljs-number">#16b169</span>;
+<span class="hljs-variable">@green-600:</span> <span class="hljs-number">#2AA198</span>;
+<span class="hljs-variable">@green-700:</span> <span class="hljs-number">#468847</span>;
 
-     green100: <span class="hljs-string">&apos;#ecfdec&apos;</span>,
-     green200: <span class="hljs-string">&apos;#d6e9c6&apos;</span>,
-     green400: <span class="hljs-string">&apos;#10b36b&apos;</span>,
-     green500: <span class="hljs-string">&apos;#16b169&apos;</span>,
-     green600: <span class="hljs-string">&apos;#2AA198&apos;</span>,
-     green700: <span class="hljs-string">&apos;#468847&apos;</span>,
+<span class="hljs-variable">@red-100:</span> <span class="hljs-number">#ffecec</span>;
+<span class="hljs-variable">@red-200:</span> <span class="hljs-number">#f05e57</span>; <span class="hljs-comment">// TODO(joy): replace #ff4450</span>
+<span class="hljs-variable">@red-500:</span> <span class="hljs-number">#db1905</span>; <span class="hljs-comment">// TODO(joy): replace #da4f49</span>
+<span class="hljs-variable">@red-600:</span> <span class="hljs-number">#d0011b</span>;
+<span class="hljs-variable">@red-700:</span> <span class="hljs-number">#b63e2b</span>; <span class="hljs-comment">// TODO(joy): replace #bd362f</span>
 
-     red100: <span class="hljs-string">&apos;#ffecec&apos;</span>,
-     red200: <span class="hljs-string">&apos;#f05e57&apos;</span>, <span class="hljs-comment">// TODO(joy): replace &apos;#ff4450</span>
-     red500: <span class="hljs-string">&apos;#db1905&apos;</span>, <span class="hljs-comment">// TODO(joy): replace &apos;#da4f49</span>
-     red600: <span class="hljs-string">&apos;#d0011b&apos;</span>,
-     red700: <span class="hljs-string">&apos;#b63e2b&apos;</span>, <span class="hljs-comment">// TODO(joy): replace &apos;#bd362f</span>
+<span class="hljs-variable">@yellow-000:</span> <span class="hljs-number">#ffff00</span>;
+<span class="hljs-variable">@yellow-100:</span> <span class="hljs-number">#f9edbe</span>;
+<span class="hljs-variable">@yellow-400:</span> <span class="hljs-number">#f79f10</span>;
+<span class="hljs-variable">@yellow-500:</span> <span class="hljs-number">#fdbc40</span>;
+<span class="hljs-variable">@yellow-600:</span> <span class="hljs-number">#f0c36d</span>;
+<span class="hljs-variable">@yellow-700:</span> <span class="hljs-number">#b37900</span>;
 
-     yellow100: <span class="hljs-string">&apos;#f9edbe&apos;</span>,
-     yellow400: <span class="hljs-string">&apos;#f79f10&apos;</span>,
-     yellow500: <span class="hljs-string">&apos;#fdbc40&apos;</span>,
-     yellow600: <span class="hljs-string">&apos;#f0c36d&apos;</span>,
-     yellow700: <span class="hljs-string">&apos;#b37900&apos;</span>,
+<span class="hljs-variable">@orange-500:</span> <span class="hljs-number">#ff5224</span>;
+<span class="hljs-variable">@orange-700:</span> <span class="hljs-number">#ed770e</span>;
+<span class="hljs-variable">@orange-800:</span> <span class="hljs-number">#ff961d</span>;
 
-     orange500: <span class="hljs-string">&apos;#ff5224&apos;</span>,
-     orange700: <span class="hljs-string">&apos;#ed770e&apos;</span>,
-
-     purple500: <span class="hljs-string">&apos;#9D3672&apos;</span>,
-}
+<span class="hljs-variable">@purple-500:</span> <span class="hljs-number">#9D3672</span>;
 </code></pre>
 
                                 
@@ -623,7 +616,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Color","level":"3.1","depth":1,"next":{"title":"Typography","level":"3.2","depth":1,"path":"Pages/Foundations/typography.md","ref":"Pages/Foundations/typography.md","articles":[]},"previous":{"title":"Layout","level":"2.3","depth":1,"path":"Pages/Introduction/layout.md","ref":"Pages/Introduction/layout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Pages/Foundations/color.md","mtime":"2017-10-20T00:38:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-20T18:19:00.487Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Color","level":"3.1","depth":1,"next":{"title":"Typography","level":"3.2","depth":1,"path":"Pages/Foundations/typography.md","ref":"Pages/Foundations/typography.md","articles":[]},"previous":{"title":"Layout","level":"2.3","depth":1,"path":"Pages/Introduction/layout.md","ref":"Pages/Introduction/layout.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less","livereload"],"pluginsConfig":{"styles-less":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508546657050.css"}},"file":{"path":"Pages/Foundations/color.md","mtime":"2017-10-21T00:28:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-21T00:28:58.172Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

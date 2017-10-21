@@ -9,46 +9,77 @@
 
 ##### Font family
 
-```js
-const fontFamilies = {
-  display: 'Newslab',     // Branding font, used in "Welcome to Databricks"
-  body: 'Helvetica Neue', // Body font, default font
-  icon:'FontAwesome',     // Icon font, used for icons 
-  code:'Source Code Pro', // Code font, used in Notebook cell command and result
-}
+```less
+@text-font: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+@code-font: "Source Code Pro", "Menlo", monospace;
+@newslab-font: "Newslab", serif;
+@icon-font: "FontAwesome";
 ```
 
 ##### Font size and line height
 
-```js
-const typeSizes      = [52, 33, 26, 22, 18, 16, 14, 13, 12, 11];
-const typeLineHeight = [72, 48, 36, 32, 24, 24, 20, 18, 16, 16];
+```less
+// font size
+@font-size-x-large: 52px; // welcome to
+@font-size-large: 33px;// workspace access control
+@font-size-h1: 26px; // page title, modal title
+@font-size-h2: 22px; // sign in to Databricks, choose organization
+@font-size-h3: 18px; // section title
+@font-size-h4: 16px;
+@font-size-h5: 14px; // 
+@font-size-h6: 13px; // file tree title, notebook menu, user menu, dialog text.
+@font-size-small: 12px; // language, shift+enter to run
+@font-size-x-small: 11px; // sidebar text
+
+// line height
+@line-height-x-large: 72px;
+@line-height-large: 48px;
+@line-height-h1: 36px;
+@line-height-h2: 32px;
+@line-height-h3: 24px;
+@line-height-h4: 24px;
+@line-height-h5: 20px;
+@line-height-h6: 18px;
+@line-height-small: 16px;
+@line-height-x-small: 16px;
+
 ```
 
 ##### Font weight
 
-```js
-const fontWeights = {
-  lighter: 200,
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,   
-};
+```less
+// weight
+@font-weight-bolder: 700;
+@font-weight-bold: 500;
+@font-weight-base: 400;
+@font-weight-light: 200;
 ```
 
 ### Different sizes
 
+| Class | Example |
+| -- | -- | 
+| headline | <div class="headline">Welcome to</div> |
+| title-large | <div class="title-large">Workspace Access Control</div> |
+| title-dialog | <div class="title-dialog">Dialog Title </div> |
+| title-page | <div class="title-page">Page Title</div> |
+| title-section | <div class="title-section">Section Title</div> |
+| text-tab | <div class="text-tab">Tab Text</div> |
+| text-large | <div class="text-large">Large text</div> |
+| text-basic | <div class="text-basic">Basic text</div> |
+| text-small | <div class="text-small">Small text</div> |
+| text-smaller | <div class="text-smaller">Smaller text</div> |
+
+
+
 ##### Headline
 
-```css
- Headline: {
-    color: colors.blackalpha300,       // (0,0,0,0.34)
-    fontSize: typeSizes[0],            // 52px
-    lineHeight: typeLineHeight[0],     // 72px
-    fontFamily: fontFamilies.display,  // Newslab
-    fontWeight: fontWeights.regular,   // 400
-
+```less
+.headline {
+    font-size: @font-size-x-large;
+    line-height: @line-height-x-large;
+    font-family: @newslab-font;
+    color: @black-alpha-300;
 }
 ```
 
@@ -56,57 +87,46 @@ _Usage_: Welcome to Databricks
 
 ##### Large Title
 
-```css
- LargeTitle: {
-    color: colors.gray800,             // #333
-    fontSize: typeSizes[1],            // 33px
-    lineHeight: typeLineHeight[1],     // 48px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+ .title-large {
+    font-size: @font-size-large;
+    line-height: @line-height-large;
 }
 ```
 
 _Usage_: Workspace Access Control \(to be deprecated\)
 
-##### Page Title
+##### Dialog Title
 
-```css
-PageTitle: {
-    color: colors.gray800,             // #333
-    fontSize: typeSizes[2],            // 26px
-    lineHeight: typeLineHeight[2],     // 36px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.lighter,   // 200
-
+```less
+.title-dialog {
+    font-size: @font-size-h1;
+    line-height: @line-height-h1;
+    font-weight: @font-weight-light;
 }
 ```
 
 _Usage_: Dialog title, Create New Cluster\(to be deprecated\)
 
-##### Title
+##### Page Title
 
-```css
-Title: {
-    color: colors.gray800,             // #333
-    fontSize: typeSizes[3],            // 22px
-    lineHeight: typeLineHeight[3],     // 32px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400    
-}
+```less
+.title-page {
+    font-size: @font-size-h2;
+    line-height: @line-height-h2;
+ }
 ```
 
 _Usage_: Sign In to Databricks, future page titles
 
 ##### Section Title
 
-```css
-SectionTitle: {
-    color: colors.gray800,             // #333
-    fontSize: typeSizes[4],            // 18px
-    lineHeight: typeLineHeight[4],     // 24px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
+```less
+ .title-section {
+    font-size: @font-size-h3;
+    line-height: @line-height-h3;
+ }
+
 ```
 
 _Usage_: Sample Data, Interactive Cluster
