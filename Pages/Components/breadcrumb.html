@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../website-1508816417162.css">
+        <link rel="stylesheet" href="../../website-1508826637625.css">
         
     
 
@@ -495,7 +495,21 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="breadcrumb">Breadcrumb</h1>
-<p>Display on the top left corner of the screen, above the page title, subject to top navigation</p>
+<p>Display on the top left corner of the screen, above the page title, subject to top navigation.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>breadcrumb</td>
+<td><div class="db"><div class="breadcrumb"><a>Clusters</a>/Create cluster</div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Help user visualize current location by showing the hierarchy of pages (e.g., notebook path in workspace)</li>
@@ -510,21 +524,17 @@
 <li>Super long entity name are truncated and use a tooltip to show the full name</li>
 </ul>
 <p><strong>Styles</strong></p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">Text</span> <span class="hljs-selector-tag">style</span>: {
-    <span class="hljs-attribute">fontSize</span>: typeSizes[<span class="hljs-number">7</span>],            // <span class="hljs-number">13px</span>
-    lineHeight: typeLineHeight[<span class="hljs-number">7</span>],     // <span class="hljs-number">18px</span>
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // <span class="hljs-number">400</span>
-}
+<pre><code class="lang-less"><span class="hljs-selector-class">.breadcrumb</span>{    
+    <span class="hljs-selector-class">.text-basic</span>;
 
-<span class="hljs-selector-tag">Clickable</span>:{
-    <span class="hljs-attribute">color</span>: colors.@black-alpha-<span class="hljs-number">500</span>,      //to replace
-}
-<span class="hljs-selector-tag">ClickableHover</span>:{
-    <span class="hljs-attribute">color</span>:  @black-alpha-<span class="hljs-number">800</span>,
-}
-<span class="hljs-selector-tag">Nonclickable</span>:{
-    <span class="hljs-attribute">color</span>: @black-alpha-<span class="hljs-number">300</span>,
+    <span class="hljs-selector-tag">a</span>{
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">@link-gray</span>;
+
+        <span class="hljs-selector-tag">&amp;</span>:<span class="hljs-selector-tag">hover</span>{
+            <span class="hljs-attribute">color</span>: <span class="hljs-variable">@text-basic-color</span>;
+            <span class="hljs-attribute">text-decoration</span>: none;
+        }
+    }
 }
 </code></pre>
 <p><strong>Example</strong></p>
@@ -574,7 +584,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Breadcrumb","level":"3.4","depth":1,"next":{"title":"Menu Dropdown","level":"3.5","depth":1,"path":"Pages/Components/menu-dropdown.md","ref":"Pages/Components/menu-dropdown.md","articles":[]},"previous":{"title":"Button Group","level":"3.3","depth":1,"path":"Pages/Components/buttongroup.md","ref":"Pages/Components/buttongroup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508816417162.css"}},"file":{"path":"Pages/Components/breadcrumb.md","mtime":"2017-10-24T03:36:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-24T03:40:15.772Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Breadcrumb","level":"3.4","depth":1,"next":{"title":"Menu Dropdown","level":"3.5","depth":1,"path":"Pages/Components/menu-dropdown.md","ref":"Pages/Components/menu-dropdown.md","articles":[]},"previous":{"title":"Button Group","level":"3.3","depth":1,"path":"Pages/Components/buttongroup.md","ref":"Pages/Components/buttongroup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508826637625.css"}},"file":{"path":"Pages/Components/breadcrumb.md","mtime":"2017-10-24T06:28:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-24T06:30:36.301Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
