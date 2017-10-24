@@ -20,23 +20,7 @@ Allow users to enter data.
 **Styles**
 
 ```css
-InputField: {
-    height: 28px,            // 13px
-    width: 
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
-PlacehoderText{
-
-}
-
-Active:{
-
-}
-
-Multiple add:{
-
-}
+//todo
 ```
 
 ### Select

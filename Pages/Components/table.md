@@ -18,6 +18,7 @@
 **Styles**
 
 ```css
+//todo replace the pseudo code  
 header: {
     background-color: ,
     color:,

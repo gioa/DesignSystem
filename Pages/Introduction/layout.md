@@ -2,20 +2,26 @@
 
 Use structural templates to design pages and create consistency across the product.
 
-// todo: add mockup to demonstrate
-
 ### Basic Layout
 
 **Sidebar **
 
 * Global navigation 
 
+![](/assets/sidebar.png)
+
 **Top bar**
 
 * Breadcrumb 
 * Utility links on the top right \(e.g., help and user menu\)
 
+![](/assets/topbar.png)
+
+**File browser**
+![](/assets/filebrowser.png)
+
 **Main area**
+![](/assets/layout.png)
 
 * Title
 * Content 
