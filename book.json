@@ -1,6 +1,0 @@
-{
-    "plugins": ["styles-less"],
-    "styles": {
-        "website": "./styles/main.less"
-    }
-}
