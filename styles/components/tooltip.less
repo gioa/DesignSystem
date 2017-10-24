@@ -1,0 +1,37 @@
+.db .tooltip {
+    position: absolute;
+    z-index: @zindex-tooltip;
+    // display: block;
+    visibility: visible;
+    .text-basic;
+
+
+    max-width: @width-tooltip;
+    
+    background: @black-alpha-800;  
+    border-radius: @border-radius-base;
+    border: 0px;
+    box-shadow: @box-shadow;
+    padding: @spacing-small @spacing-base;
+    
+    .tooltip-inner{
+        color: @white;
+        a {
+            color: @blue-200;
+        }
+    }
+
+    &:before{
+        content: " ";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right:8px solid black;
+        left:-8px;
+        top:7px;
+    }
+    
+}
