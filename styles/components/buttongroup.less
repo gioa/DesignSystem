@@ -1,0 +1,38 @@
+.db .btn-group {
+    
+    button.btn {
+      .text-basic;
+      border: 1px solid @border-medium;
+      background-color: @white;
+      border-right-width: 0px;
+      outline: none;
+
+      &.selected {
+        border-color: @border-blue;
+        background-color: @item-active-bg;
+
+        & + button.btn {
+          border-left-color: @border-blue;
+        }
+      }
+
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+
+      &:first-child {
+        border-radius: @border-radius-base 0px 0px @border-radius-base;
+      
+      }
+
+      &:last-child {
+        border-right-width: 1px;
+        border-radius: 0px @border-radius-base @border-radius-base 0px;
+      
+      }
+
+      & + button.btn {
+        margin-left: 0;
+      }
+    }
+}

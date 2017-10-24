@@ -2,35 +2,31 @@
 
 **Disable opacity**
 
-```css
-const disabledOpacity = {
-    small: 0.34,
-    regular: 0.45, 
-}
+```less
+// disable opacity
+@disabled-opacity-small: 0.34;
+@disabled-opacity-base: 0.45;
 ```
 
 ##### Z-index
 
-```css
-const z-index = {
-    hide: -1,
-    default: 0,
-    small: 1,
-    modal: 500,
-    dropmenu: 999,
-    tooltip: 1000,
-    loadingIndicator: 1001,
-}
+```less
+// z-index
+@zindex-base: 1;
+@zindex-dropdown: 200;
+@zindex-tooltip: 300;
+@zindex-modal: 500;
+@zindex-popover: 550;
+@zindex-contextmenu: 600;
 // todo: define how to use z-index in product
 ```
 
 **Radius**
 
-```css
-const radius = {
-    small: 2,     //
-    regular: 4,   // all the buttons, modal, menu dropdown, tooltip
-};
+```less
+// border radius
+@border-radius-small: 2px;
+@border-radius-base: 4px;
 ```
 
 ##### 

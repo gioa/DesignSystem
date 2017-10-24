@@ -72,7 +72,7 @@
 
 
 
-##### Headline
+##### headline
 
 ```less
 .headline {
@@ -85,7 +85,7 @@
 
 _Usage_: Welcome to Databricks
 
-##### Large Title
+##### title-large
 
 ```less
  .title-large {
@@ -96,7 +96,7 @@ _Usage_: Welcome to Databricks
 
 _Usage_: Workspace Access Control \(to be deprecated\)
 
-##### Dialog Title
+##### title-dialog
 
 ```less
 .title-dialog {
@@ -108,7 +108,7 @@ _Usage_: Workspace Access Control \(to be deprecated\)
 
 _Usage_: Dialog title, Create New Cluster\(to be deprecated\)
 
-##### Page Title
+##### title-page
 
 ```less
 .title-page {
@@ -119,7 +119,7 @@ _Usage_: Dialog title, Create New Cluster\(to be deprecated\)
 
 _Usage_: Sign In to Databricks, future page titles
 
-##### Section Title
+##### title-section
 
 ```less
  .title-section {
@@ -131,53 +131,46 @@ _Usage_: Sign In to Databricks, future page titles
 
 _Usage_: Sample Data, Interactive Cluster
 
-##### Large Tab Text
+##### text-tab
 
-```css
-LargeTabText: {
-    fontSize: typeSizes[5],            // 16px
-    lineHeight: typeLineHeight[5],     // 24px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
+```less
+.text-tab {
+    font-size: @font-size-h4; 
+    line-height: @line-height-h4; 
+ }
+
 ```
 
 _Usage_: Single Sign on / Admin Login
 
-##### Large Body Text
+##### text-large
 
-```css
-LargeBodyText: {
-    fontSize: typeSizes[6],            // 14px
-    lineHeight: typeLineHeight[6],     // 20px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.text-large {
+    font-size: @font-size-h5;
+    line-height: @line-height-h5;
 }
 ```
 
 _Usage_: Text in welcome section
 
-##### Body Text
+##### text-basic
 
-```css
-BodyText: {
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.text-basic {
+    font-size: @font-size-h6;
+    line-height: @line-height-h6;
 }
 ```
 
 _Usage_: Regular body text
 
-##### Small Text
+##### text-small
 
-```css
-SmallText: {
-    fontSize: typeSizes[8],            // 12px
-    lineHeight: typeLineHeight[8],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.text-small {
+    font-size: @font-size-small;
+    line-height: @line-height-small;
 }
 ```
 
@@ -185,61 +178,67 @@ _Usage_: language
 
 ##### Smaller Text
 
-```css
-SmallerText: {
-    fontSize: typeSizes[9],            // 11px
-    lineHeight: typeLineHeight[9],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.text-smaller {
+    font-size: @font-size-x-small;
+    line-height: @line-height-x-small;
 }
+
 ```
 
 _Usage_: sidebar text
 
 ### Different colors
 
-##### Body Text Secondary
+| Class | Example |
+| -- | -- | 
+| text-secondary | <div class="text-secondary">text secondary</div> |
+| homeview-section-title | <div class="homeview-section-title">What's new?</div> |
+| text-error | <div class="text-error">Invalid username or password.</div> |
+| text-warning | <div class="text-warning">Make sure to copy the token now. You won't be able to see it again.</div> |
 
-```css
-BodyTextSecondary: {
-    color: colors.blackalpha500, //(0,0,0,0.52) = #7a7a7a
-    fontSize: typeSizes[7], // 13px
-    lineHeight: typeLineHeight[7], // 18px
-    fontFamily: fontFamilies.body, // Helvetica Neue
-    fontWeight: fontWeights.regular, // 400
+##### text-secondary
+
+```less
+.text-secondary {
+    .text-basic;
+    color: @text-secondary-color; //(0,0,0,0.52) = #7a7a7a
 }
 ```
 
 _Usage_: introductions, tips.  
 _Notes_: This color is very close to \#797979 used in file tree text, to be replaced.
 
-##### Body Text Tertiary
+##### homeview-section-title
 
-```css
-BodyTextTertiary: {
-    color: colors.gray500, //#9b9b9b
-    fontSize: typeSizes[7], // 13px
-    lineHeight: typeLineHeight[7], // 18px
-    fontFamily: fontFamilies.body, // Helvetica Neue
-    fontWeight: fontWeights.regular, // 400
-}
-```
-
-_Usage_: Notebook menu item
-
-##### Title Text Secondary
-
-```css
-TitleSecondary: {
-    color: colors.gray500,             // #9b9b9b
-    fontSize: typeSizes[3],            // 22px
-    lineHeight: typeLineHeight[3],     // 32px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400    
+```less
+.homeview-section-title{
+    .title-page;
+    color: @text-secondary-color;
 }
 ```
 
 _Usage_: section title in welcome page, e.g., Featured Notebooks, and What's New.
 
+##### .text-error 
 
+```less
+.text-error {
+    .text-basic;
+    color: @text-error-color;
+}
+```
+
+_Usage_: Inline error messages. 
+
+##### text-warning
+
+```less
+.text-warning {
+    .text-basic;
+    color: @text-warning-color; //(0,0,0,0.52) = #7a7a7a
+}
+```
+
+_Usage_: Inline warning messages. 
 

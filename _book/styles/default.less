@@ -1,20 +1,20 @@
 @import "./variables.less";
 
 // text types
-@text-default-color: @black-alpha-800;
+@text-basic-color: @black-alpha-800;
 @text-secondary-color: @black-alpha-500;
-@text-tertiary-color: @gray-500;
-@text-tertiary-hover-color: @gray-600;
-@text-disabled-color: @black-alpha-200;
+// @text-tertiary-color: @gray-500;
+// @text-tertiary-hover-color: @gray-600;
+// @text-disabled-color: @black-alpha-200;
 @text-error-color: @red-700;
-@text-warning-color: @yellow-500;
+@text-warning-color: @orange-700;
 
 
 body, html, body{
 	width: 100%;
 	height: 100%;
 	background: @white;
-	color: @text-default-color;
+	color: @text-basic-color;
 	font-family: @text-font;
 	font-weight: @font-weight-base;
 }
@@ -49,8 +49,8 @@ body, html, body{
  }
 
 .text-tab {
- 	font-size: @font-size-h4;
-	line-height: @line-height-h4;
+ 	font-size: @font-size-h4; 
+	line-height: @line-height-h4; 
  }
 
 .text-large {
@@ -73,16 +73,32 @@ body, html, body{
 	line-height: @line-height-x-small;
 }
 
+// different colors
+.text-secondary {
+    .text-basic;
+    color: @text-secondary-color; //(0,0,0,0.52) = #7a7a7a
+}
+
+.text-error {
+    .text-basic;
+    color: @text-error-color;
+}
+
+.text-warning {
+    .text-basic;
+    color: @text-warning-color; //(0,0,0,0.52) = #7a7a7a
+}
+
 // homeview 
 .homeview-section-title{
-	color: @text-secondary-color;
 	.title-page;
+	color: @text-secondary-color;
 }
 
 // link
-// @link-text: @blue-green-100;
-// @link-icon: @gray-600;
-// @link-hover-text: @blue-green-200;
+@link-text-color: @blue-green-100;
+@link-hover-text-color: @blue-green-200;
+@link-menu-color: @gray-600;
 // @link-hover-icon: @blue-green-200;
 // @link-disabled-text: @text-disabled;
 // @link-disabled-icon: @text-disabled;
@@ -92,10 +108,12 @@ body, html, body{
 @border-light: @gray-150;
 @border-medium: @gray-300;
 @border-dark: @gray-400;
+@border-blue: @blue-green-100;
 
 // general components 
-//@item-active-bg         : @primary-1;
-//@item-hover-bg          : @primary-1;
+@item-hover-bg          : @gray-100;
+@item-active-bg         : @gray-200;
+//button
 
 // box shadow
-@box-shadow-default: @black-alpha-50;
+@box-shadow-basic: @black-alpha-50;

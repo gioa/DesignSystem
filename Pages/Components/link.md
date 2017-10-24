@@ -1,75 +1,95 @@
 # Link
 
-##### Text Link
+Can link to another page or act as text-only button. Usually it is used inline using tag `<a>`. 
 
-```css
-BodyTextLink: {
-    color: colors.@bluegreen100, //Branding #1CA0C2
-    fontSize: typeSizes[7], // 13px
-    lineHeight: typeLineHeight[7], // 18px
-    fontFamily: fontFamilies.body, // Helvetica Neue
-    fontWeight: fontWeights.regular, // 400
+| Class | Example |
+| -- | -- | 
+| tag `a` | <div class="db"><a>Latest release notes</a></div> |
+| tag `a` and `i` |  <div class="db"><a><i class="fa "></i></a></div> |
+| icon-link |<div class="db"><a class="icon-link"><i class="fa "></i>Notebook</a></div> |
+| icon-link link-menu|  <div class="db"><a class="icon-link link-menu"><i class="fa "></i>Run all</a></div> |
+
+
+##### Link
+
+```less
+a {
+    .text-basic;
+    text-decoration: none;
+    color: @link-text-color;
+
+    &:focus, &:hover {
+        color: @link-hover-text-color;
+        text-decoration: underline;
+    }
+
 }
 ```
 
 _Usage_: Featured notebook links, latest release notes.
 
-##### Text Link Hover
+##### Icon only
 
-```css
-BodyTextLinkHover: {
-    color: colors.@bluegreen200, //darken(#1CA0C2, 10%);
-    fontSize: typeSizes[7], // 13px
-    lineHeight: typeLineHeight[7], // 18px
-    fontFamily: fontFamilies.body, // Helvetica Neue
-    fontWeight: fontWeights.regular, // 400
+```less
+a {
+    i {
+        color: @link-menu-color;
+        
+        &:focus, &:hover {
+            color: @link-hover-text-color;
+            text-decoration: none;
+        }
+    }
 }
 ```
 
-_Usage_: Hover state for featured notebook links, latest release notes.
+_Usage_: utility links on the top right: user, help, recent icons.
 
-##### **Icon and text **
+##### icon-link 
 
-```css
-// todo: replace the pseudo code with right format
+```less
+.icon-link {
+    color: @text-basic-color;
 
-IconText-homeview:{
-    icon: colors.@bluegreen100,
-    text: colors.gray800, //#333
+    i {
+        color: @link-text-color;
+        margin-right: @spacing-small;
 
-    hover:{
-        textcolor: colors.@bluegreen200, // #333
-        text-decoration: underline;
+        &:focus, &:hover {
+            color: @link-hover-text-color;
+            text-decoration: none;
+        }
+
     }
 
-    disable:{
-        opacity:disabledOpacity, 
+    &:focus, &:hover {
+        color: @link-hover-text-color;
     }
-}
-
-IconText-filetree:{
-    color:colors.gray600, //#797979   
-
-    hover:{
-        background-color: colors.gray100, 
-    }
-    selected:{
-        background-color: colors.gray200,
-    }
-
-}
-
-IconText-notebookMenu:{
-    color:color.gray500,  //to be replaced    
-    hover:{
-        background-color: colors.gray600, 
-    }
-    disabled:{
-        opacity:disabledOpacity,
-    }
-
 }
 ```
 
-_Usage_: File tree item, notebook menu, home view actions
+_Usage_: Icon + link on welcome page.
+
+##### icon-link link-menu
+```less
+.link-menu {
+    color: @link-menu-color;
+
+    i {
+        color: @link-menu-color;
+    }
+
+    &:focus, &:hover {
+        color: @text-basic-color;
+        text-decoration: none;
+        i {
+            color: @text-basic-color;
+        }
+    }
+}
+```
+
+_Usage_: Notebook menu.  
+_Notes_: To be deprecated. Should have the same hover/seleted style as file browser items in future.
+
 

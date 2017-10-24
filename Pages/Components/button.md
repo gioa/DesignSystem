@@ -2,6 +2,52 @@
 
 Use a button to trigger an action. Button style varies based on their types/sizes/states.
 
+| Class | Example |
+| -- | -- | 
+| btn |<div class="db"><button type="button" class="btn  btn-default">Default</button> <button type="button" class="btn  btn-default" disabled>Default</button> <button type="button" class="btn btn-default"><i class="fa fa-close"></i></span> Terminate </button> </div>|
+| btn btn-primary |<div class="db"><button type="button" class="btn  btn-primary">Primary</button> <button type="button" class="btn  btn-primary" disabled>Primary</button>  <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i></span> Create Cluster</button></div>|
+| btn  btn-danger |<div class="db"><button type="button" class="btn  btn-danger">Danger</button> <button type="button" class="btn  btn-danger" disabled>Danger</button></div>|
+| btn btn-fit-container |<div class="db"><button type="button" class="btn  btn-primary btn-fit-container">Sign In</button></div>|
+
+### Default
+
+**When to use**
+
+* Along with primary button \(e.g., cancel\)
+* Multiple actions \(clone, restart, terminate on cluster detail page\)
+
+##### Style
+
+```less
+.btn {
+    .text-basic;
+    border-radius: @border-radius-base;
+    padding: @spacing-small @spacing-base;
+    background: @item-active-bg;
+    border: 1px solid @border-medium;
+    text-decoration: none;
+    text-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    
+    /* States */
+    &:not([DISABLED]):hover, &:not([DISABLED]):active, &:not([DISABLED]):focus{
+        background: @item-hover-bg;
+    }
+
+    &:focus, &:active, &:hover {
+        outline: none;
+    }
+
+    &.disabled, &[disabled], &.disabled:hover {
+        cursor: not-allowed;
+        opacity: @disabled-opacity-base;
+    }
+}
+```
+
+_Usage_: Cancel, Cluster actions, e.g., Clone, Restart, Terminate
+
 ### Primary
 
 **When to use**
@@ -17,159 +63,22 @@ Use a button to trigger an action. Button style varies based on their types/size
 * When an action takes a while, show loading states.  
 * For icon only button, add label in the tooltip.
 
-##### Primary: regular
+##### Styles
 
-```css
-PrimaryButton: {
-    background-color: colors.blue500,  // todo: replace with bluegreen100?
-    color: colors.white,               // #fff
-    border: solid 1px colors.blue600,  // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[0] spacing[1],    // 4px, 8px  
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.btn-primary{
+    background: @blue-green-100;
+    color:@white;
+    border: 1px solid @blue-green-100;
+
+    &:not([DISABLED]):hover, &:not([DISABLED]):active, &:not([DISABLED]):focus {
+        background: @blue-green-200;
+    } 
 }
+
 ```
 
-**Styles for different states**
-
-```css
-PrimaryButtonHover:{
-    background-color: colors.blue700,  
-}
-
-PrimaryButtonDisable:{
-    opacity: disabledOpacity,          // 0.45
-}
-
-PrimaryButtonLoading:{
-    opacity: disabledOpacity,          // 0.45
-    fa-spinner: display,               // to do  
-}
-```
-
-**Primary: icon + label **
-
-```css
-PrimaryButtonIcon: {
-    i.fa-xxx{
-        margin-right: spacing[0],      //4px 
-    }
-}
-```
-
-_Usage:_ Create button on cluster list page
-
-**Primary: fit container + bigger **
-
-```css
-PrimaryButtonFitContainer: {
-    background-color: colors.blue500, // todo: replace with bluegreen100?
-    color: colors.white,              // #fff
-    border: solid 1px colors.blue600, // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[1] auto,         // 8px, auto 
-    fontSize: typeSizes[6],           // 14px
-    lineHeight: typeLineHeight[6],    // 24px
-    fontFamily: fontFamilies.body,    // Helvetica Neue
-    fontWeight: fontWeights.regular,  // 400
-}
-```
-
-_Usage_: Sign In, Single Sign On
-
-### Default
-
-**When to use**
-
-* Along with primary button \(e.g., cancel\)
-* Multiple actions \(clone, restart, terminate on cluster detail page\)
-
-##### Default: regular
-
-```css
-DefaultButton: {
-    background-color: colors.gray.100, // #f5f5f5
-    color: colors.gray800,             // #333    
-    border: solid 1px colors.gray300,  // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[0] spacing[1],    // 4px, 8px
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
-```
-
-_Usage_: Cancel.
-
-**Default: different states **
-
-```css
-DefaultButtonHover:{
-    background-color: colors.gray200,  // #eee 
-}
-```
-
-_Usage_: Cancel
-
-**Default: icon + label **
-
-```css
-DefaultButtonIcon: {
-    i.fa-xxx{
-        margin-right: spacing[0],      //4px 
-    }
-}
-```
-
-_Usage_: Cluster actions, e.g., Clone, Restart, Terminate
-
-**Default: fit container + bigger**
-
-```css
-FitContainerButtonDefault: {
-    background-color: colors.gray.100,  // #f5f5f5
-    color: colors.gray800,              // #333
-    border: solid 1px colors.gray300,   // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[1] auto,           // 8px, auto 
-    radius: radius[1], // 4px
-    fontSize: typeSizes[6],             // 14px
-    lineHeight: typeLineHeight[6],      // 24px
-    fontFamily: fontFamilies.body,      // Helvetica Neue
-    fontWeight: fontWeights.regular,    // 400
-}
-```
-
-_Usage_: Back to sign in button in choose organization page
-
-**Default: fit container + icon**
-
-```css
-FitContainerButtonDefault: {
-    background-color: colors.gray.100, // #f5f5f5
-    color: colors.gray800,             // #333
-    border: solid 1px colors.gray300,  // border style 
-    border-radius: radius[1],          // 4px
-    padding: spacing[0] auto,          // 4px, auto 
-    radius: radius[1], // 4px
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-
-    i.fa-xxx{
-        margin-right: spacing[0], //4px 
-    }
-}
-```
-
-_Usage_: Back to sign in button in choose organization page
-
-### 
+_Usage_: Create cluster, create job, Save, Confirm
 
 ### Danger
 
@@ -177,71 +86,44 @@ _Usage_: Back to sign in button in choose organization page
 
 * Destructive actions such as delete or remove to call attention.
 
-##### Danger: regular
+##### Style
 
-```css
-DangerButton: {
-    background-color: colors.red500,  
-    color: colors.white,               // #fff
-    border: solid 1px colors.red700,  // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[0] spacing[1]     // 4px, 8px   
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+```less
+.btn-danger{
+    background: @red-500;
+    color: @white;
+    border: 1px solid @red-700;
+
+    &:not([DISABLED]):hover, &:not([DISABLED]):active, &:not([DISABLED]):focus {
+        background: @red-700;
+    } 
 }
 ```
 
-_Usage_: Remove User, Disable ACLs.
+_Usage_: Remove User, Disable ACLs, Delete dashboard (fit container)
 
-**Danger: different states **
 
-```css
-DangerButtonHover:{
-    background-color: colors.red700,  
-}
+### Fit container
 
-DangerButtonDisable:{
-    opacity: disabledOpacity,          // 0.45
-}
-```
+**When to use**
 
-_Usage_: Remove user, Disable ACLs.
+* Emphasize the key action per container
 
-**Danger: Icon + Label**
+##### Style
 
-```css
-DangerButtonIcon: {
-    i.fa-xxx{
-        margin-right: spacing[0],      //4px 
-    }
+```less
+.btn-fit-container{
+    .text-large;
+    display:block;
+    text-align: center;
+    width: 100%;
+    padding-top: @spacing-base;
+    padding-bottom: @spacing-base;
 }
 ```
 
-_Usage_: Delete dashboard
+_Usage_: Sign In, Single Sign On, Back to sign in button in choose organization page
 
-**Danger: Fit container + Icon**
-
-```css
-DangerButtonFitContainerIcon: {
-    background-color: colors.red500,  
-    color: colors.white,              // #fff
-    border: solid 1px colors.red700,  // border style
-    border-radius: radius[1],          // 4px
-    padding: spacing[0] auto, // 4px, auto
-    fontSize: typeSizes[7], // 13px
-    lineHeight: typeLineHeight[7], // 18px
-    fontFamily: fontFamilies.body, // Helvetica Neue
-    fontWeight: fontWeights.regular, // 400
-
-    i.fa-xxx{
-        margin-right: spacing[0], //4px
-    }
-}
-```
-
-_Usage_: Delete dashboard
 
 ### Icon
 
@@ -255,12 +137,7 @@ _Usage_: Delete dashboard
 // todo
 ```
 
-**Example**
-
-* add cell and paste cell
-* comments
-* actions in a table \(flat icon\)
-* notebook plot options 
+_Usage_: add cell and paste cell, comments, notebook plot options 
 
 
 

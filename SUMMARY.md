@@ -1,10 +1,8 @@
 # Summary
 
-* [Install](README.md)
-
 ## Introduction
 
-* [Goals](Pages/Introduction/goals.md)
+* [Goals](README.md)
 * [Principles](Pages/Introduction/principles.md)
 * [Layout](Pages/Introduction/layout.md)
 
@@ -39,6 +37,7 @@
 ## Resources
 
 * [Design Assets](Pages/Resources/design-assets.md)
+* [Install](Pages/Resources/install.md)
 * [Voice and Tone](Pages/Resources/voice-and-tone.md)
 * [References](Pages/Resources/references.md)
 

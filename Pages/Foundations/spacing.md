@@ -9,44 +9,37 @@ Use **multiples of 4 **to define dimension, padding and margin of both block and
 
 ##### Spacing
 
-```js
-const spacing = {
-    zero: 0,
-    small: 4,
-    base: 8,
-    medium: 12,
-    large: 16,
-    x-large:24,
-    xx-large: 32,
-    xxx-lage: 48,
-}
+```less
+@spacing-zero: 0px;
+@spacing-small: 4px;
+@spacing-base: 8px;
+@spacing-medium: 12px;
+@spacing-large: 16px;
+@spacing-x-large: 24px;
+@spacing-xx-large: 32px;
+@spacing-xxx-large: 48px;
 ```
 
 ##### Element dimensions
 
-```js
+```less
 // todo: consolidate the values. 
 // Too specific at the foundation level? Defined in component level instead?
 
-const width =  {
-    sidebar: 76,  
-    filetree: 196,
-    right-panel: 250,
-    tooltip:260,
-    form: 300;
-    dialog-small: 400,
-    dialog-medium:600,
-    dialog-big:800,
-    find-and-replace-bar: 1000,
-}
+// width 
+@width-sidebar: 76px;
+@width-filetree: 196px;
+@width-rightpanel: 250px;
+@width-tooltip: 260px;
+@width-form-login: 300px;
+@width-dialog-small: 400px;
+@width-dialog-base: 600px;
+@width-dialog-large: 800px;
 
-const height = {
-    button: 28,
-    topbar: 40,
-    dropdown-max: 600,//?
-    dialog-max: 600,
-
-};
+// height 
+@height-button: 28px;
+@height-topbar: 40px;
+@height-component-max: 600px;
 ```
 
 

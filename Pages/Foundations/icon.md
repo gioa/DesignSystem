@@ -48,7 +48,9 @@ Icons are presented to provide visual context to the users. In the product we us
 <span class="icon"><i class="fa "></i> Shared<small>fa-share-alt-square </small></span><br>
 <span class="icon"><i class="fa "></i> Users<small>fa-users </small></span><br>
 <span class="icon"><i class="fa "></i> Folder<small>fa-folder-o </small></span><br>
-<span class="icon"><i class="fa "></i> Owner's Folder<small>fa-folder </small></span><br>
+<span class="icon"><i class="fa "></i> User's Folder<small>fa-folder </small></span><br>
+<span class="icon"><i class="fa "></i> User Folder open<small>fa-folder-open </small></span><br>
+<span class="icon"><i class="fa "></i> File<small>fa-file </small></span><br>
 <span class="icon"><i class="fa "></i> Library<small>fa-book </small></span><br>
 <span class="icon"><i class="fa "></i> Home<small>fa-home </small></span><br>
 <span class="icon"><i class="fa "></i> Actions<small>fa-chevron-down </small></span><br>
@@ -93,8 +95,11 @@ Icons are presented to provide visual context to the users. In the product we us
 <div class="col_title">Actions: </div>
 <span class="icon"><i class="fa "></i> Add New<small>fa-plus </small></span><br>
 <span class="icon"><i class="fa"></i> Clone<small>fa-clone </small></span><br>
+<span class="icon"><i class="fa"></i> Copy<small>fa-copy </small></span><br>
+<span class="icon"><i class="fa "></i> Start<small>fa-play </small></span><br>
+<span class="icon"><i class="fa "></i> Terminate<small>fa-stop </small></span><br>
 <span class="icon"><i class="fa "></i> Restart<small>fa-refresh </small></span><br>
-<span class="icon"><i class="fa "></i> Terminate<small>fa-close </small></span><br>
+<span class="icon"><i class="fa "></i> Delete<small>fa-close </small></span><br>
 <span class="icon"><i class="fa "></i> Show advanced<small>fa-angle-double-down </small></span><br>
 <span class="icon"><i class="fa "></i> Hide advanced<small>fa-angle-double-up </small></span><br>
 <span class="icon"><i class="fa "></i> External Link<small>fa-external-link </small></span><br>
@@ -105,6 +110,8 @@ Icons are presented to provide visual context to the users. In the product we us
 <span class="icon"><i class="fa "></i>Edit<small>fa-edit </small></span><br>
 <span class="icon"><i class="fa "></i> Caret-down<small>fa-caret-down</small></span><br>
 <span class="icon"><i class="fa "></i> Caret-right<small>fa-caret-right</small></span><br>
+<span class="icon"><i class="fa "></i> More<small>fa-ellipsis-h</small></span><br>
+
 </div>
 
 <div class="col-xs-6 col-sm-4">
@@ -112,7 +119,7 @@ Icons are presented to provide visual context to the users. In the product we us
 <span class="icon"><i class="fa "></i> Spinner<small>fa-spinner </small></span><br>
 <span class="icon"><i class="fa "></i> Selected<small>fa-check </small></span><br>
 <span class="icon"><i class="fa "></i> Running<small>fa-circle </small></span><br>
-<span class="icon"><i class="fa "></i> No permission<small>fa-ban </small></span><br>
+<span class="icon"><i class="fa "></i> No permission<small>fa-lock </small></span><br>
 <span class="icon"><i class="fa "></i> Info<small>fa-info-circle </small></span><br>
 <span class="icon"><i class="fa "></i> Exclamation<small>fa-exclamation-circle  </small></span><br>	
 <span class="icon"><i class="fa "></i> Tooltip<small>fa-question-circle </small></span><br>
@@ -127,6 +134,10 @@ Icons are presented to provide visual context to the users. In the product we us
 <span class="icon"><i class="fa "></i>Move</span><small>fa-arrows </small><br>
 <span class="icon"><i class="fa "></i>Hide panel<small>fa-caret-square-o-right </small></span><br>
 <span class="icon"><i class="fa "></i>Show panel<small>fa-caret-square-o-left </small></span><br>
+<span class="icon"><i class="fa "></i> Expland<small>fa-plus-square-o </small></span><br>
+<span class="icon"><i class="fa "></i> Hide<small>fa-minus-square-o </small></span><br>	
+<span class="icon"><i class="fa "></i> Hide result<small> fa-file-code-o </small></span><br>
+<span class="icon"><i class="fa "></i> Show title<small>fa-header </small></span><br>
 <span class="icon"><i class="fa "></i>Fork<small>fa-code-fork </small></span><br>
 <span class="icon"><i class="fa "></i>Filter<small>fa-filter </small></span><br>
 <span class="icon"><i class="fa "></i>2-Factor<small>fa-mobile </small></span><br>
