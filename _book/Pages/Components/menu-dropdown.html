@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../website-1508816417162.css">
+        <link rel="stylesheet" href="../../website-1508826575492.css">
         
     
 
@@ -496,6 +496,20 @@
                                 
                                 <h1 id="menu-dropdown">Menu Dropdown</h1>
 <p>Display a list of options with one option per line.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dropdown</td>
+<td><div class="db"><div class="dropdown-menu"><ul><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#" disabled>Disabled action</a></li><li><a href="#">Something else here</a></li><li role="separator" class="divider"></li><li><a href="#">Separated link</a></li></ul></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Offer users a list of actions (e.g., user menu) or options to select (dropdown in form/select element)</li>
@@ -511,24 +525,66 @@
 <li>Cascading menu </li>
 <li>Menu nesting: reveal nested submenus, nested to one level deep only.  </li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code class="lang-css">// todo
-Div: {
-    textStyle
-    padding
-    border
-    width:  //128, 192,  
-    max-height
+<p><strong>Style</strong></p>
+<pre><code class="lang-less">.dropdown-menu {
+    display: block;
+    position: relative;
+    z-index: @zindex-dropdown;
+    min-width: @width-dropdown-min;
+    max-width: @width-dropdown-max;
 
-}
-Divider: {
+    background: @white;  
+    border-radius: @border-radius-base;
+    border: 1px solid @border-medium;
+    box-shadow: @box-shadow;
+    padding: 0px;
 
-}
-hover:{
+    &gt; ul {
+        overflow: auto;
+        list-style: none;
+        margin: 0px;      
+        padding: @spacing-small 0;
 
-}
-Disabled:{
+        &gt; li {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
 
+            &amp;.divider {
+                height: 1px;
+                margin: @spacing-small 1px;
+                background-color: @border-light;
+            }
+
+            &amp;.dropdown-header {
+                padding: @spacing-small @spacing-base;
+                .text-small;
+                color: @text-secondary-color;
+            }
+
+            &gt; a {
+                padding: @spacing-small @spacing-base;
+                cursor: default;
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                .text-overflow;
+                cursor: pointer;
+                text-shadow: none;
+
+                &amp;:not([DISABLED]):hover {
+                    text-decoration: none;
+                    text-shadow: none;
+                    background: @blue-green-100;
+                    color: @white;
+
+                }
+                &amp;.disabled, &amp;[disabled], &amp;.disabled:hover {
+                    opacity: @disabled-opacity-base;
+                }
+            }
+        }
+    }
 }
 </code></pre>
 <p><strong>Example</strong></p>
@@ -580,7 +636,7 @@ Disabled:{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Menu Dropdown","level":"3.5","depth":1,"next":{"title":"Tooltip","level":"3.6","depth":1,"path":"Pages/Components/tooltip.md","ref":"Pages/Components/tooltip.md","articles":[]},"previous":{"title":"Breadcrumb","level":"3.4","depth":1,"path":"Pages/Components/breadcrumb.md","ref":"Pages/Components/breadcrumb.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508816417162.css"}},"file":{"path":"Pages/Components/menu-dropdown.md","mtime":"2017-10-24T03:36:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-24T03:40:15.772Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Menu Dropdown","level":"3.5","depth":1,"next":{"title":"Tooltip","level":"3.6","depth":1,"path":"Pages/Components/tooltip.md","ref":"Pages/Components/tooltip.md","articles":[]},"previous":{"title":"Breadcrumb","level":"3.4","depth":1,"path":"Pages/Components/breadcrumb.md","ref":"Pages/Components/breadcrumb.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508826575492.css"}},"file":{"path":"Pages/Components/menu-dropdown.md","mtime":"2017-10-24T05:46:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-24T06:29:33.849Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,4 +1,5 @@
 .db .btn-group {
+    margin: auto @spacing-large;
     
     button.btn {
       .text-basic;
@@ -7,6 +8,10 @@
       border-right-width: 0px;
       outline: none;
 
+      &:hover {
+        background-color: @item-hover-bg;
+      }
+
       &.selected {
         border-color: @border-blue;
         background-color: @item-active-bg;
@@ -14,10 +19,10 @@
         & + button.btn {
           border-left-color: @border-blue;
         }
-      }
 
-      &:hover {
-        background-color: @item-hover-bg;
+        &:hover {
+          background-color: @item-active-bg; //no hover style change
+        }
       }
 
       &:first-child {

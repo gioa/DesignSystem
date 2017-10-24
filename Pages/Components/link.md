@@ -1,6 +1,4 @@
-# Link
-
-Can link to another page or act as text-only button. Usually it is used inline using tag `<a>`. 
+# Link 
 
 | Class | Example |
 | -- | -- | 
@@ -33,7 +31,7 @@ _Usage_: Featured notebook links, latest release notes.
 ```less
 a {
     i {
-        color: @link-menu-color;
+        color: @link-gray;
         
         &:focus, &:hover {
             color: @link-hover-text-color;
@@ -73,10 +71,10 @@ _Usage_: Icon + link on welcome page.
 ##### icon-link link-menu
 ```less
 .link-menu {
-    color: @link-menu-color;
+    color: @link-gray;
 
     i {
-        color: @link-menu-color;
+        color: @link-gray;
     }
 
     &:focus, &:hover {

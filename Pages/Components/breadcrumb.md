@@ -1,6 +1,12 @@
 # Breadcrumb
 
-Display on the top left corner of the screen, above the page title, subject to top navigation
+Display on the top left corner of the screen, above the page title, subject to top navigation.
+
+| Class | Example |
+| -- | -- | 
+| breadcrumb |<div class="db"><div class="breadcrumb"><a>Clusters</a>/Create cluster</div>|
+
+
 
 **When to use**
 
@@ -17,22 +23,18 @@ Display on the top left corner of the screen, above the page title, subject to t
 
 **Styles**
 
-```css
-Text style: {
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
-
-Clickable:{
-    color: colors.@black-alpha-500,      //to replace
-}
-ClickableHover:{
-    color:  @black-alpha-800,
-}
-Nonclickable:{
-    color: @black-alpha-300,
+```less
+.breadcrumb{	
+	.text-basic;
+	
+	a{
+		color: @link-gray;
+		
+		&:hover{
+			color: @text-basic-color;
+			text-decoration: none;
+		}
+	}
 }
 ```
 

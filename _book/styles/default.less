@@ -98,7 +98,7 @@ body, html, body{
 // link
 @link-text-color: @blue-green-100;
 @link-hover-text-color: @blue-green-200;
-@link-menu-color: @gray-600;
+@link-gray: @gray-600;
 // @link-hover-icon: @blue-green-200;
 // @link-disabled-text: @text-disabled;
 // @link-disabled-icon: @text-disabled;
@@ -113,7 +113,13 @@ body, html, body{
 // general components 
 @item-hover-bg          : @gray-100;
 @item-active-bg         : @gray-200;
-//button
 
-// box shadow
-@box-shadow-basic: @black-alpha-50;
+
+
+
+// mixins
+.text-overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

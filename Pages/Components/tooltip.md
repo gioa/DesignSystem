@@ -1,5 +1,12 @@
 # Tooltip
 
+Display additonal information for an element (//todo: add tooltip javascript).
+
+| Class | Example |
+| -- | -- | 
+| tooltip |<div class="db"><i class="fa fa-question-circle"></i></div>|
+
+
 **When to use:**
 
 * When hover over a UI element \(truncated text, icon\), a tooltip appears to provide additional information. 
@@ -12,20 +19,8 @@
 
 **Styles**
 
-```css
-text: {
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
-}
-
-box: {
-    color: colors.white,               // todo
-    background-color: colors.gray100,
-    border-radius:, 
-    width: ,
-}
+```less
+//todo
 ```
 
 **Example**

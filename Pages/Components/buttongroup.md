@@ -1,14 +1,14 @@
 # Button Group
 
-Use a button group as a way to select an option (todo: add javascript to select another option).
-
 | Class | Example |
 | -- | -- | 
 | button group |<div class="db"><div class="btn-group"><button class="btn">All</button><button class="btn">Created by me</button><button class="btn selected">Accessible by me</button></div>|
 
+//todo: add javascript to select another option
 
 **When to use**
 
+* Use a button group as a way to select an option
 * Select less than 6 options \(Use **Form/Select** for equal or greater than 6 options\)
 
 **Interaction**

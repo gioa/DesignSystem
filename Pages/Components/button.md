@@ -1,6 +1,5 @@
 # Button
 
-Use a button to trigger an action. Button style varies based on their types/sizes/states.
 
 | Class | Example |
 | -- | -- | 
@@ -13,6 +12,7 @@ Use a button to trigger an action. Button style varies based on their types/size
 
 **When to use**
 
+* Use button to trigger an action
 * Along with primary button \(e.g., cancel\)
 * Multiple actions \(clone, restart, terminate on cluster detail page\)
 
