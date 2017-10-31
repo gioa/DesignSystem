@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../website-1508885664844.css">
+        <link rel="stylesheet" href="../../website-1509411114946.css">
         
     
 
@@ -497,6 +497,28 @@
                                 <h1 id="form">Form</h1>
 <p>Allow users to enter data.</p>
 <h3 id="text-input">Text input</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>input</td>
+<td><div class="db"><div class="form"><label>Cluster Name<i class="fa fa-question-circle"></i></label><input type="text" class="form-control" placeholder="Required"></div></div></td>
+</tr>
+<tr>
+<td>input disabled</td>
+<td><div class="db"><div class="form"><label class="disabled">User Name<i class="fa fa-question-circle"></i></label><input type="text" class="form-control" placeholder="Required" disabled></div></div></td>
+</tr>
+<tr>
+<td>input error</td>
+<td><div class="db"><div class="form"><label>Cluster Name<i class="fa fa-question-circle"></i></label><input type="text" class="form-control error" value="DuplicatedName"><span class="errormessage">Error messages.</span></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Use in forms to take input from users. </li>
@@ -505,15 +527,31 @@
 <ul>
 <li>Required and optional </li>
 <li>Hint: appear on the right side of the input field to provide more context.</li>
-<li>Tooltip:  </li>
-<li>Placeholder</li>
-<li>Error </li>
 <li>Autofocus</li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code class="lang-css">//todo
-</code></pre>
 <h3 id="select">Select</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Select</td>
+<td><div class="db"><div class="form"><label>Databricks Runtime Version<i class="fa fa-question-circle"></i></label><select defaultvalue="lucy"><option value="jack">3.4 beta (GPU, Scala 2.11) </option><option value="lucy">3.4 beta (Scala 2.11)</option><option value="disabled" disabled>Disabled</option><option value="Yiminghe">yiminghe</option></select></div></div></td>
+</tr>
+<tr>
+<td>Select disabled</td>
+<td><div class="db"><div class="form"><label>Databricks Runtime Version<i class="fa fa-question-circle"></i></label><select defaultvalue="lucy" disabled><option value="jack">3.4 beta (GPU, Scala 2.11) </option><option value="lucy">Lucy</option><option value="disabled" disabled>Disabled</option><option value="Yiminghe">yiminghe</option></select></div></div></td>
+</tr>
+<tr>
+<td>Select disabled</td>
+<td><div class="db"><div class="form"><label>Databricks Runtime Version<i class="fa fa-question-circle"></i></label><select defaultvalue="lucy" class="error"><option value="jack">3.4 beta (GPU, Scala 2.11) </option><option value="lucy">Lucy</option><option value="disabled" disabled>Disabled</option><option value="Yiminghe">yiminghe</option></select><span class="errormessage">Error messages.</span></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Select a single or multiple options from a list in a drop menu. Use when you have 6-15 options.</li>
@@ -526,9 +564,25 @@
 <li>Type a head.</li>
 <li>Group options into sections.</li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code>//todo
-</code></pre><h3 id="checkboxes">Checkboxes</h3>
+<h3 id="checkboxes">Checkboxes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkbox</td>
+<td><div class="db"><div class="form"><input type="checkbox" id="spotInstance" name="subscribe" value="newsletter"><label for="spotInstance" class="inlineLabel">Use spot instance</label></div></div></td>
+</tr>
+<tr>
+<td>Checkbox disabled</td>
+<td><div class="db"><div class="form"><input type="checkbox" id="spotInstance" name="subscribe" value="newsletter" disabled><label for="spotInstance" class="inlineLabel">Use spot instance</label></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Allow users to select multiple options, each option is independent of all other options. E.g., autoscaling and auto-termination.</li>
@@ -540,10 +594,25 @@
 <li>Use positive and active wording for checkbox labels. </li>
 <li>Default value </li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code class="lang-css">//todo
-</code></pre>
 <h3 id="radio-button">Radio button</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radio Button</td>
+<td><div class="db"><div class="form"><input type="radio" id="contactChoice1" name="contact" value="email" checked><label for="contactChoice1" class="inlineLabel">Link</label><input type="radio" id="contactChoice2" name="contact" value="phone"><label for="contactChoice2" class="inlineLabel">Unlink</label></div></div></td>
+</tr>
+<tr>
+<td>Radio Button disabled</td>
+<td><div class="db"><div class="form"><input type="radio" id="contactChoice1" name="contact1" value="email" checked disabled><label for="contactChoice1" class="inlineLabel">Link</label><input type="radio" id="contactChoice2" name="contact1" value="phone" disabled><label for="contactChoice2" class="inlineLabel">Unlink</label></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Select a single option from a set of options.</li>
@@ -554,11 +623,6 @@
 <li>Select one deselect the other   </li>
 <li>Default value </li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code class="lang-css">RadioGroup{    
-   //todo 
-}
-</code></pre>
 <h3 id="switch--toggle">Switch / Toggle</h3>
 <p><strong>When to use</strong></p>
 <ul>
@@ -568,10 +632,21 @@
 <ul>
 <li>Turn on and turn off.  </li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code class="lang-css">//todo
-</code></pre>
 <h3 id="text-area">Text Area</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text Area</td>
+<td><div class="db"><div class="form"><div class="form"><label>Spark Config<i class="fa fa-question-circle"></i></label><textarea name="textarea"></textarea></div></div></div></td>
+</tr>
+</tbody>
+</table>
 <p><strong>When to use</strong></p>
 <ul>
 <li>Todo</li>
@@ -580,9 +655,88 @@
 <ul>
 <li>Todo</li>
 </ul>
-<p><strong>Styles</strong></p>
-<pre><code>todo
-</code></pre><h3 id="references">References</h3>
+<h3 id="styles-for-the-form">Styles for the form</h3>
+<pre><code class="lang-less"><span class="hljs-selector-class">.form</span>{
+
+    <span class="hljs-selector-class">.text-basic</span>;
+
+    <span class="hljs-selector-tag">label</span>{
+        <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">@font-weight-bold</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">@text-tertiary-color</span>;
+        <span class="hljs-attribute">display</span>: block;
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-variable">@spacing-small</span>;
+
+        <span class="hljs-selector-class">.fa</span>{
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-variable">@spacing-small</span>;
+        }
+    }
+
+    <span class="hljs-selector-tag">input</span>, <span class="hljs-selector-tag">select</span>, <span class="hljs-selector-tag">textarea</span> {
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">@border-dark</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-variable">@border-radius-base</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-variable">@height-item</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-variable">@width-item-base</span>;
+        <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-variable">@box-shadow</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-variable">@spacing-small</span> <span class="hljs-variable">@spacing-base</span>;
+
+        <span class="hljs-selector-tag">&amp;</span>::<span class="hljs-selector-tag">placeholder</span> {
+          <span class="hljs-attribute">color</span>: <span class="hljs-variable">@text-tertiary-color</span>;
+        }
+
+        <span class="hljs-selector-tag">&amp;</span>:<span class="hljs-selector-tag">focus</span> { 
+            <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">@blue-200</span>;
+            <span class="hljs-attribute">outline</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-selector-class">.box-shadow</span>(<span class="hljs-number">0px</span>; <span class="hljs-number">1px</span>; <span class="hljs-number">3px</span>; <span class="hljs-variable">@blue-200</span>; <span class="hljs-variable">@disabled-opacity-small</span>);
+        }
+
+        <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-class">.disabled</span>, <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-attr">[disabled]</span>, <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-class">.disabled</span>:<span class="hljs-selector-tag">hover</span> {
+            <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">@gray-200</span>;
+            <span class="hljs-attribute">cursor</span>: not-allowed;
+            <span class="hljs-attribute">opacity</span>: <span class="hljs-variable">@disabled-opacity-base</span>;
+        }
+
+        <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-attr">[type=checkbox]</span>, <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-attr">[type=radio]</span>{
+            <span class="hljs-attribute">width</span>:auto;
+            <span class="hljs-attribute">height</span>: auto;
+            <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">@spacing-small</span>;
+        }
+
+        <span class="hljs-selector-tag">&amp;</span><span class="hljs-selector-attr">[type=radio]</span>{
+            <span class="hljs-attribute">display</span>: inline-block;
+        }
+    }
+
+    <span class="hljs-selector-tag">textarea</span>{
+        <span class="hljs-attribute">width</span>: <span class="hljs-variable">@width-item-max</span>;
+        <span class="hljs-attribute">height</span>: <span class="hljs-variable">@height-textarea</span>;
+    }
+
+    <span class="hljs-selector-class">.error</span>{
+
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">@red-100</span>;
+
+        <span class="hljs-selector-tag">&amp;</span>:<span class="hljs-selector-tag">focus</span> { 
+            <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">@red-200</span>;
+            <span class="hljs-attribute">outline</span>: <span class="hljs-number">0px</span>;
+            <span class="hljs-selector-class">.box-shadow</span>(<span class="hljs-number">0px</span>; <span class="hljs-number">1px</span>; <span class="hljs-number">3px</span>; <span class="hljs-variable">@red-200</span>; <span class="hljs-variable">@disabled-opacity-small</span>);
+        }
+     }
+
+     <span class="hljs-selector-class">.errormessage</span>{
+         <span class="hljs-selector-class">.text-error</span>;
+         <span class="hljs-attribute">margin-left</span>: <span class="hljs-variable">@spacing-base</span>;
+     }
+
+     <span class="hljs-selector-class">.inlineLabel</span>{
+         <span class="hljs-attribute">color</span>: <span class="hljs-variable">@text-basic-color</span>;
+         <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">@font-weight-base</span>;
+         <span class="hljs-attribute">display</span>:inline-block;
+         <span class="hljs-attribute">margin-right</span>: <span class="hljs-variable">@spacing-large</span>;
+     }
+
+}
+</code></pre>
+<h3 id="references">References</h3>
 <p><a href="https://uxdesign.cc/design-better-forms-96fadca0f49c" target="_blank">https://uxdesign.cc/design-better-forms-96fadca0f49c</a></p>
 
                                 
@@ -627,7 +781,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Form","level":"3.7","depth":1,"next":{"title":"Form: Complex Input","level":"3.8","depth":1,"path":"Pages/Components/complex-input.md","ref":"Pages/Components/complex-input.md","articles":[]},"previous":{"title":"Tooltip","level":"3.6","depth":1,"path":"Pages/Components/tooltip.md","ref":"Pages/Components/tooltip.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1508885664844.css"}},"file":{"path":"Pages/Components/form.md","mtime":"2017-10-24T22:51:05.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-24T22:54:23.071Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Form","level":"3.7","depth":1,"next":{"title":"Form: Complex Input","level":"3.8","depth":1,"path":"Pages/Components/complex-input.md","ref":"Pages/Components/complex-input.md","articles":[]},"previous":{"title":"Tooltip","level":"3.6","depth":1,"path":"Pages/Components/tooltip.md","ref":"Pages/Components/tooltip.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1509411114946.css"}},"file":{"path":"Pages/Components/form.md","mtime":"2017-10-30T20:49:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-31T00:51:49.325Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
