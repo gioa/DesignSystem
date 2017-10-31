@@ -1,0 +1,79 @@
+.db .form{
+
+	.text-basic;
+		
+	label{
+		font-weight: @font-weight-bold;
+		color: @text-tertiary-color;
+		display: block;
+		margin-bottom: @spacing-small;
+
+		.fa{
+			margin-left: @spacing-small;
+		}
+	}
+
+	input, select, textarea {
+		border: 1px solid @border-dark;
+		border-radius: @border-radius-base;
+		height: @height-item;
+		width: @width-item-base;
+		box-shadow: inset @box-shadow;
+		padding: @spacing-small @spacing-base;
+
+		&::placeholder {
+		  color: @text-tertiary-color;
+		}
+
+		&:focus { 
+		    border-color: @blue-200;
+		    outline: 0px;
+		    .box-shadow(0px; 1px; 3px; @blue-200; @disabled-opacity-small);
+		}
+
+        &.disabled, &[disabled], &.disabled:hover {
+        	background-color: @gray-200;
+        	cursor: not-allowed;
+            opacity: @disabled-opacity-base;
+        }
+
+        &[type=checkbox], &[type=radio]{
+        	width:auto;
+        	height: auto;
+        	margin-right: @spacing-small;
+        }
+
+        &[type=radio]{
+        	display: inline-block;
+        }
+	}
+
+	textarea{
+		width: @width-item-max;
+		height: @height-textarea;
+	}
+
+	.error{
+
+        background-color: @red-100;
+
+        &:focus { 
+		    border-color: @red-200;
+		    outline: 0px;
+		    .box-shadow(0px; 1px; 3px; @red-200; @disabled-opacity-small);
+		}
+     }
+
+     .errormessage{
+     	.text-error;
+     	margin-left: @spacing-base;
+     }
+
+     .inlineLabel{
+     	color: @text-basic-color;
+     	font-weight: @font-weight-base;
+     	display:inline-block;
+     	margin-right: @spacing-large;
+     }
+
+}

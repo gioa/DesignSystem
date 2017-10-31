@@ -1,5 +1,7 @@
 # Notification
 
+![](/assets/notification.png)
+
 **When to use**
 
 * Provide short, timely, and relevant information to the user

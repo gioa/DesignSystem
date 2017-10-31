@@ -28,6 +28,9 @@ Use structural templates to design pages and create consistency across the produ
 
 ### Table Layout
 
+![](/assets/cluster.png)
+
+
 **When to use**
 
 * Display a list of structured data in the main area
@@ -41,6 +44,8 @@ Use structural templates to design pages and create consistency across the produ
 * Cluster list page, Job list page
 
 ### Form Layout
+
+![](/assets/newCluster.png)
 
 **When to use**
 
@@ -56,6 +61,8 @@ Use structural templates to design pages and create consistency across the produ
 * Create new cluster, Create new library.
 
 ### Detail Page Layout
+
+![](/assets/notebook.png)
 
 **When to use**
 

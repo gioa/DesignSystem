@@ -1,5 +1,7 @@
 # Table
 
+![](/assets/table.png)
+
 **When to use**
 
 * Use tables to logically structure content in a grid to facilitate understanding
