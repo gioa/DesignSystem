@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Layout · GitBook</title>
+        <title>How to choose · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Foundations/color.html" />
+    <link rel="next" href="onboarding.html" />
     
     
-    <link rel="prev" href="principles.html" />
+    <link rel="prev" href="emptystate.html" />
     
 
     </head>
@@ -96,9 +96,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="principles.html">
+        <li class="chapter " data-level="1.2" data-path="../Introduction/principles.html">
             
-                <a href="principles.html">
+                <a href="../Introduction/principles.html">
             
                     
                     Principles
@@ -109,9 +109,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="layout.html">
+        <li class="chapter " data-level="1.3" data-path="../Introduction/layout.html">
             
-                <a href="layout.html">
+                <a href="../Introduction/layout.html">
             
                     
                     Layout
@@ -351,9 +351,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="../Patterns/messages.html">
+        <li class="chapter " data-level="4.1" data-path="messages.html">
             
-                <a href="../Patterns/messages.html">
+                <a href="messages.html">
             
                     
                     Messaging
@@ -364,9 +364,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="../Patterns/emptystate.html">
+        <li class="chapter " data-level="4.2" data-path="emptystate.html">
             
-                <a href="../Patterns/emptystate.html">
+                <a href="emptystate.html">
             
                     
                     Empty states
@@ -377,9 +377,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../Patterns/howtochoose.html">
+        <li class="chapter active" data-level="4.3" data-path="howtochoose.html">
             
-                <a href="../Patterns/howtochoose.html">
+                <a href="howtochoose.html">
             
                     
                     How to choose
@@ -390,9 +390,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="../Patterns/onboarding.html">
+        <li class="chapter " data-level="4.4" data-path="onboarding.html">
             
-                <a href="../Patterns/onboarding.html">
+                <a href="onboarding.html">
             
                     
                     Onboarding
@@ -492,7 +492,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Layout</a>
+        <a href="../.." >How to choose</a>
     </h1>
 </div>
 
@@ -507,93 +507,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="layouts">Layouts</h1>
-<p>Use structural templates to design pages and create consistency across the product.</p>
-<h3 id="basic-layout">Basic Layout</h3>
-<p><strong>Sidebar </strong></p>
+                                <h1 id="how-to-choose">How to Choose</h1>
+<p><strong>Disable vs. Hide</strong></p>
 <ul>
-<li>Global navigation </li>
-</ul>
-<p><img src="../../assets/sidebar.png" alt=""></p>
-<p><strong>Top bar</strong></p>
+<li><p><strong>Default to hide</strong>: Disabled fields give extra thoughts for the user about why it is not available. If they do not need it anyway, we should hide it.</p>
+</li>
+<li><p><strong>When to disable</strong>:</p>
 <ul>
-<li>Breadcrumb </li>
-<li>Utility links on the top right (e.g., help and user menu)</li>
-</ul>
-<p><img src="../../assets/topbar.png" alt=""></p>
-<p><strong>File browser</strong>
-<img src="../../assets/filebrowser.png" alt=""></p>
-<p><strong>Main area</strong>
-<img src="../../assets/layout.png" alt=""></p>
-<ul>
-<li>Title</li>
-<li>Content </li>
-</ul>
-<h3 id="table-layout">Table Layout</h3>
-<p><strong>When to use</strong></p>
-<ul>
-<li>Display a list of structured data in the main area</li>
-</ul>
-<p><strong>Interaction</strong></p>
-<ul>
-<li>Main actions(create), Filter, Sections, Sort, Pagination</li>
-</ul>
-<p><strong>Example</strong></p>
-<ul>
-<li>Cluster list page, Job list page</li>
-</ul>
-<p><img src="../../assets/cluster.png" alt=""></p>
-<h3 id="form-layout">Form Layout</h3>
-<p><strong>When to use</strong></p>
-<ul>
-<li>Display a form in the main area. </li>
-</ul>
-<p><strong>Interaction</strong></p>
-<ul>
-<li>Buttons on the top (close to the title), or on the bottom</li>
-<li>Progressive disclosure, e.g., create a new table </li>
-</ul>
-<p><strong>Example</strong></p>
-<ul>
-<li>Create new cluster, Create new library.</li>
-</ul>
-<p><img src="../../assets/newCluster.png" alt=""></p>
-<h3 id="detail-page-layout">Detail Page Layout</h3>
-<p><strong>When to use</strong></p>
-<ul>
-<li>Every entity (cluster, table, job, job run, library) in the product has a detail page to display information and provide actions.</li>
-<li>Group related content and prioritize those based on the use case.</li>
-</ul>
-<p><strong>Example</strong></p>
-<ul>
-<li>Notebook: title, context bar (menu, toolbar), widget bar (toggle between visible and hidden), cells, right panel (toggle between visible and hidden)</li>
-<li>Table: title, action buttons, section titles, tables</li>
-<li>Job: title, action buttons, meta data, section titles, tables </li>
-<li>Cluster: title, action buttons, tab, form | table | meta data + table </li>
-<li>Library: title, action buttons, meta data, table </li>
-</ul>
-<p><img src="../../assets/notebook.png" alt=""></p>
-<h3 id="responsive-ui-"><strong>Responsive UI </strong></h3>
-<ul>
-<li>Breakpoints: 960, 1280, 1440, 1600 <ul>
-<li>for layout under 960px wide, set min width for components    </li>
-<li>for layout over 1600px wide<ul>
-<li>continue to grow for table and notebook cell (expand)</li>
-<li>for fixed elements or elements with a max width, remain left aligned while the right margin grows</li>
+<li>Part of a sentence: e.g., Auto-terminate after X hours of inactivity, the user can enable it by clicking the checkbox.</li>
+<li>Discovery: e.g. you could have this feature if you are enterprise user.</li>
+<li>Constantly hiding and showing fields may distract because the view changes constantly. E.g., EBS fields. </li>
 </ul>
 </li>
 </ul>
-</li>
-<li>12 column grid layout with gutter (24px) </li>
-<li>Panel influence on the grid<ul>
-<li>We have 2 different panels in the product: file browser and the notebook right panel</li>
-<li>Currently file browser panel pushes the main content to the right. It squeezes some content (notebook, table), but push others off screen (home view)</li>
-<li>Notebook right panels: revision history and comments squeeze the cells while schedule and dashboard property overlay. </li>
+<p><strong>Load more vs. Pagination vs. Infinite scrolling</strong></p>
+<ul>
+<li><strong>Load more</strong>: single unambiguous choice. Should allow to view all at once, or show no. of all results to avoid leaving your users guessing when they are going to run out of results.</li>
 </ul>
+<ul>
+<li><p><strong>Pagination</strong>: each page is a specific set of results, user knows item location and have a sense of control. But it is perceived to be slow, discourages users from browsing.</p>
+</li>
+<li><p><strong>Infinite scrolling</strong>: more items appear as the user scroll down the page. It works well for discovery websites, but is often disastrous for prioritization apps. </p>
 </li>
 </ul>
-<h3 id="references">References:</h3>
-<p><a href="https://material.io/guidelines/layout/responsive-ui.html" target="_blank">https://material.io/guidelines/layout/responsive-ui.html</a></p>
 
                                 
                                 </section>
@@ -621,12 +557,12 @@
 
             
                 
-                <a href="principles.html" class="navigation navigation-prev " aria-label="Previous page: Principles">
+                <a href="emptystate.html" class="navigation navigation-prev " aria-label="Previous page: Empty states">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Foundations/color.html" class="navigation navigation-next " aria-label="Next page: Color">
+                <a href="onboarding.html" class="navigation navigation-next " aria-label="Next page: Onboarding">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -637,7 +573,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Layout","level":"1.3","depth":1,"next":{"title":"Color","level":"2.1","depth":1,"path":"Pages/Foundations/color.md","ref":"Pages/Foundations/color.md","articles":[]},"previous":{"title":"Principles","level":"1.2","depth":1,"path":"Pages/Introduction/principles.md","ref":"Pages/Introduction/principles.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1509755820148.css"}},"file":{"path":"Pages/Introduction/layout.md","mtime":"2017-11-03T21:25:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-04T00:36:57.724Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to choose","level":"4.3","depth":1,"next":{"title":"Onboarding","level":"4.4","depth":1,"path":"Pages/Patterns/onboarding.md","ref":"Pages/Patterns/onboarding.md","articles":[]},"previous":{"title":"Empty states","level":"4.2","depth":1,"path":"Pages/Patterns/emptystate.md","ref":"Pages/Patterns/emptystate.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1509755820148.css"}},"file":{"path":"Pages/Patterns/howtochoose.md","mtime":"2017-11-03T23:57:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-04T00:36:57.724Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

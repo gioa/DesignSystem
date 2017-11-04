@@ -34,7 +34,7 @@
 
     
         
-        <link rel="stylesheet" href="../../website-1509411114946.css">
+        <link rel="stylesheet" href="../../website-1509755820148.css">
         
     
 
@@ -377,7 +377,20 @@
             
         </li>
     
-        <li class="chapter " data-level="4.3" data-path="../Patterns/onboarding.html">
+        <li class="chapter " data-level="4.3" data-path="../Patterns/howtochoose.html">
+            
+                <a href="../Patterns/howtochoose.html">
+            
+                    
+                    How to choose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Patterns/onboarding.html">
             
                 <a href="../Patterns/onboarding.html">
             
@@ -495,7 +508,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="table">Table</h1>
-<p><img src="../../assets/table.png" alt=""></p>
+<div class="db"><table class="table"> <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead> <tbody> <tr> <td>1</td> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <td>2</td> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <td>3</td> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody> </table></div>
+
 <p><strong>When to use</strong></p>
 <ul>
 <li>Use tables to logically structure content in a grid to facilitate understanding</li>
@@ -512,49 +526,25 @@
 <li>Empty values</li>
 </ul>
 <p><strong>Styles</strong></p>
-<pre><code class="lang-css">//todo replace the pseudo code  
-header: {
-    background-color: ,
-    color:,
-    fontSize: typeSizes[7],            // 13px
-    lineHeight: typeLineHeight[7],     // 18px
-    fontFamily: fontFamilies.body,     // Helvetica Neue
-    fontWeight: fontWeights.regular,   // 400
+<pre><code class="lang-less"><span class="hljs-selector-class">.table</span>{
+    <span class="hljs-selector-class">.text-basic</span>;
+    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-variable">@border-dark</span>;
 
-    width:
-    height:
-
-    sort column{
-        arrow icon 
+    <span class="hljs-selector-tag">thead</span> <span class="hljs-selector-tag">tr</span>, <span class="hljs-selector-tag">thead</span> <span class="hljs-selector-tag">th</span>{
+        <span class="hljs-attribute">font-weight</span>: <span class="hljs-variable">@font-weight-bold</span>;
+        <span class="hljs-attribute">text-align</span>: left;
+        <span class="hljs-attribute">color</span>: <span class="hljs-variable">@text-secondary-color</span>;
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">@gray-50</span>;
+        <span class="hljs-attribute">padding</span>:  <span class="hljs-variable">@spacing-small</span> <span class="hljs-variable">@spacing-base</span>;
     }
-    sort column{
-        indicate column is sortable
+    <span class="hljs-selector-tag">tr</span>{
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">@white</span> <span class="hljs-meta">!important</span>;
     }
-}
 
-row:{
-    width 
-    height 
+    <span class="hljs-selector-tag">tr</span> <span class="hljs-selector-tag">td</span>{
+        <span class="hljs-attribute">padding</span>:  <span class="hljs-variable">@spacing-small</span> <span class="hljs-variable">@spacing-base</span>;
+    }
 
-}
-row:hover{
-    background-color:
-}
-row:disable{
-    background-color:
-}
-
-cell{
-    cell width:
-    padding:
-}
-
-
-
-
-column alignment:{
-    left align text columns
-    right align numeric column
 }
 </code></pre>
 <p><strong>Example</strong></p>
@@ -605,7 +595,7 @@ column alignment:{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Table","level":"3.9","depth":1,"next":{"title":"Notification","level":"3.10","depth":1,"path":"Pages/Components/notification.md","ref":"Pages/Components/notification.md","articles":[]},"previous":{"title":"Form: Complex Input","level":"3.8","depth":1,"path":"Pages/Components/complex-input.md","ref":"Pages/Components/complex-input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1509411114946.css"}},"file":{"path":"Pages/Components/table.md","mtime":"2017-10-30T21:42:08.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-31T00:51:49.325Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Table","level":"3.9","depth":1,"next":{"title":"Notification","level":"3.10","depth":1,"path":"Pages/Components/notification.md","ref":"Pages/Components/notification.md","articles":[]},"previous":{"title":"Form: Complex Input","level":"3.8","depth":1,"path":"Pages/Components/complex-input.md","ref":"Pages/Components/complex-input.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["styles-less"],"pluginsConfig":{"styles-less":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"website-1509755820148.css"}},"file":{"path":"Pages/Components/table.md","mtime":"2017-11-03T23:24:03.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-04T00:36:57.724Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
